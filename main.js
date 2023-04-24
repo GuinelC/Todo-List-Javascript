@@ -99,7 +99,7 @@ function displayTodo() {
                 <div class="form2-contain">
                   <h4 class="head-contain"><i class="fa-solid fa-circle-plus"></i> Ajouter de nouveaux élements</h4>
                   <input id="myName" placeholder="..." required><br>
-                  <button type="submit" value="+" id="add-Item">AJOUTER !</button>
+                  <button type="submit" value="+" id="add-Item">AJOUTER <i class="fa-solid fa-plus"></i></button>
                 </div>
             </form>
             <hr><h2 class="list-title"><i class="fa-solid fa-circle-chevron-down"></i> Vos tâches à accomplir</h2>

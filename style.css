@@ -172,6 +172,7 @@ form input {
 form button {
     height: 45px;
     padding: 10px;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 15px;
     border-radius: 10px;
@@ -354,13 +355,6 @@ form button:hover {
     width: 25px;
 }
 
-/* 
-.div-items input {
-    width: 19px;
-    height: 39px;
-    margin-right: 10px;
-} */
-
 .contain-item {
     display: flex;
     justify-content: space-between;
@@ -370,7 +364,6 @@ form button:hover {
     font-size: 20px;
     width: 100%;
 }
-
 
 .left-item {
     display: flex;
@@ -417,6 +410,11 @@ footer a{
     margin: 5px;
     margin-left: 10px;
 }
+
+footer a:hover{
+    color: rgb(151, 255, 170);
+}
+
 
 .contact{
     display: flex;
