@@ -1,3 +1,5 @@
+// This app is created by Charly Guinel
+
 // startAPP
 const appBtn = document.querySelector(".btn-app");
 appBtn.addEventListener("click", () => {
@@ -18,24 +20,23 @@ class Item {
   }
 }
 
-// FORM1
+// FORM1 - DOM 
 const form = document.querySelector("#form1");
 const formInput = document.getElementById("form-input");
 const listCat = document.getElementById("list-cat");
 
-// FORM2
+// FORM2 - DOM
 const containItem = document.getElementById("title-div");
 containItem.innerHTML = `<h2 class="title-select">Faite votre selection...</h2>
 <img class="img-select" src="listlogo.png" alt="logo home">`;
 
-// Local storage
+// Save data in : Local storage
 const todos = JSON.parse(localStorage.getItem("todos")) || [];
 function saveTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-
-// Create CAT in local storage
+// Create Category OBJECT in local storage
 function addTodo() {
   const title = formInput.value;
   const todo = new Todo(title);
@@ -44,35 +45,33 @@ function addTodo() {
   form.reset();
 }
 
-
-// Submit TODO in local storage
+// Submit TODO Category in local storage
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   addTodo();
   displayTodo();
 });
 
-
-// Delete Cat from local storage
+// Delete Category from local storage
 function deleteTodo(id) {
   const index = id.split("-")[1];
   todos.splice(index, 1);
   saveTodos();
-  console.log("index delete is: ", index);
-  
+  // console.log("index deleted is: ", index);
+
   if (todos < 1){
     window.location.reload();
   }
-  // Vider les éléments qui était afficher dans cette Todo
+
+  // new display elements, after delete
   setTimeout(() => {
     containItem.innerHTML = `<h2 class="title-select">Faite votre selection !</h2>
         <img class="img-select" src="listlogo.png" alt="logo home">`;
-  }, 50); // ajoute une pause, en millisecondes
+  }, 50); // this is a time in (millisecondes)
   displayTodo();
 }
 
-
-// Boucle sur la liste CAT à sortir.
+// This function display old category, and we can create a another todo item list
 function displayTodo() {
   listCat.innerText = "";
   for (let i = 0; i < todos.length; i++) {
@@ -84,7 +83,7 @@ function displayTodo() {
     todoCat.innerHTML = `${todo.title} <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>`;
     listCat.appendChild(todoCat);
 
-    // Length of array
+    // Display Length of array 
     const numberList = document.querySelector(".number-list");
     if (todos.length >= 1){
       numberList.innerText = todos.length;
@@ -92,7 +91,7 @@ function displayTodo() {
       numberList.innerText = "0";
     }
 
-    // Create From item
+    // This is a form, to make a new item list  
     function formItem() {
       containItem.innerHTML = `
             <form id="form2">
@@ -106,6 +105,7 @@ function displayTodo() {
             <hr><h2 class="list-title"><i class="fa-solid fa-circle-chevron-down"></i> Vos tâches à accomplir</h2>
             <div id="list-item"></div> `;
 
+      // Form 2 - DOM      
       const form2 = document.getElementById("form2");
       const inputForm2 = document.getElementById("myName");
 
@@ -124,15 +124,17 @@ function displayTodo() {
         addItem();
       });
 
+      // Display items for list clicked
       function displayItem() {
         const listItem = document.getElementById("list-item");
-        // Reset affichage list
         listItem.innerHTML = "";
 
         for (let j = 0; j < todo.items.length; j++) {
           const item = todo.items[j];
           let resultItem = document.createElement("div");
           resultItem.classList.add("div-items");
+
+          // display item list, with checkbox
           resultItem.innerHTML = `
                     <div class="contain-item">
                       <div class="left-item">
@@ -152,7 +154,7 @@ function displayTodo() {
             saveTodos();
           });
 
-          // Si Checkbox est activer, change color
+          // if Checkbox is active, change color
           const checkbox = document.getElementById(`check-${j}`);
           checkbox.addEventListener("change", (event) => {
             item.checked = event.target.checked;
@@ -164,37 +166,38 @@ function displayTodo() {
             saveTodos();
           });
 
-          // Si bouton check actif, change color
+          // Display green color, if already been checked
           if (item.checked) {
             resultItem.style.backgroundColor = "rgb(151, 255, 170)";
           }
         }
       }
+      // Call function for list items
       displayItem();
     }
 
-
-    // Event - Delete Cat
+    // Event - Delete Category
     let deleteBtn = todoCat.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", () => {
       deleteTodo(todoCat.id);
     });
 
-    // ajouter un écouteur d'événement de clic à todoCat
+    // Change style on click in todo element 
     todoCat.addEventListener("click", (event) => {
       formItem();
-      // réinitialiser la couleur de fond des autres todoCat
+
+      // reset color for Category
       const allTodoCat = document.querySelectorAll(".todoCat");
       allTodoCat.forEach(cat => {
         cat.style.backgroundColor = "";
         cat.style.color = "";
       });
-      // changer la couleur de fond du todoCat cliqué
+      // change color if category clicked
       todoCat.style.backgroundColor = "rgb(70, 70, 70)";
       todoCat.style.color = "rgb(151, 255, 170)";
     });
   }
 }
 
-// Afficher list cat 
+// Display category
 displayTodo();
