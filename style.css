@@ -1,0 +1,493 @@
+body {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(230, 230, 230);
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #1A2B3C;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    /* position: sticky; */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+}
+
+.home img {
+    width: 40%;
+    max-height: 100vh;
+}
+
+.pres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+    /* width: 60%; */
+    /* height: auto; */
+    padding-top: 60px
+}
+
+.pres h1 {
+    font-family: 'Russo One';
+    font-size: 7vw;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0;
+}
+
+.pres h2 {
+    font-family: 'Rajdhani';
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+}
+
+.pres p {
+    font-family: 'Rajdhani';
+    font-weight: bold;
+    font-size: 25px;
+    width: 70%;
+    color: black;
+    text-align: center;
+}
+
+
+.btn-app {
+    background: #57cc99;
+    width: 200px;
+    margin-top: 30px;
+    height: auto;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    margin-bottom: 30px;
+}
+
+.btn-app:hover {
+    background-color: #80ed99;
+}
+
+.btn-app:active {
+    top: 2px;
+}
+
+/* TODO  */
+.todo {
+    display: flex;
+    justify-content: center;
+    display: none;
+    /* background-color: coral; */
+    min-height: 750px;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin: 25px 0 25px 0;
+}
+
+.todo-menu {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    border: 2px solid gray;
+}
+
+.todo-menu h2 {
+    margin: 40px 0 0 0;
+}
+
+
+  #list-cat {
+    margin-top: 15px;
+}
+
+#form1 {
+    /* background-color: darkkhaki; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: #a4a4a4; */
+    min-height: 150px;
+}
+
+.fa-list {
+    margin-right: 10px;
+}
+
+#form1 label {
+    font-family: Aldrich;
+    font-size: 21px;
+}
+
+form input {
+    background-color: rgb(222, 222, 222);
+    height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+form button {
+    height: 45px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+form button:hover {
+    color: rgb(151, 255, 170);
+    transition: 0.25s;
+}
+
+.headList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #5d7d9d; */
+    margin: 20px 0 15px 0;
+    padding: 0px 10px 0 10px;
+    color: black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.headList p {
+    font-family: Aldrich;
+    font-size: 21px;
+    /* font-weight: bold; */
+}
+
+
+.number-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Russo one';
+    font-size: 25px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.delete-btn {
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+}
+
+.delete-btn:hover {
+    font-size: 18px;
+    color: rgb(255, 36, 36);
+    transition: 0.25s;
+    border: none;
+    background-color: transparent;
+}
+
+.todoCat {
+    height: 35px;
+    background-color: rgb(207, 207, 207);
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 19px;
+    font-family: 'Rajdhani';
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.todoCat:hover {
+    background-color: rgb(70, 70, 70);
+    color: white;
+    transition: 0.25s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#title-div {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 65%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(155, 155, 155);
+
+}
+
+#form2 {
+    /* background-color: #80ed99; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form2-contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    /* background-color: fuchsia; */
+}
+
+.form2Title {
+    font-family: 'Russo one';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 45px;
+    width: 50%;
+}
+
+.list-title {
+    margin: 25px 0px 25px 0;
+    font-family: Aldrich;
+}
+
+#myName {
+    background-color: rgb(222, 222, 222);
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.head-contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Aldrich;
+    font-size: 21px;
+    margin: 20px 0px 20px 0;
+}
+
+.fa-circle-plus {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+/* .fa-circle-chevron-down{
+    font-size: 25px;
+} */
+
+#add-Item {
+    height: 45px;
+    background-color: black;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#add-Item:hover {
+    color: rgb(151, 255, 170);
+    transition: 0.25s;
+}
+
+.div-items {
+    background-color: rgb(207, 207, 207);
+    margin: 20px 0 20px 0px;
+    height: 30px;
+    padding: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.div-items:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.div-items button {
+    border: none;
+    height: 25px;
+    width: 25px;
+}
+
+/* 
+.div-items input {
+    width: 19px;
+    height: 39px;
+    margin-right: 10px;
+} */
+
+.contain-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Rajdhani';
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+}
+
+
+.left-item {
+    display: flex;
+    justify-content: center;
+}
+
+.delItem {
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+}
+
+.delItem:hover {
+    color: red;
+    transition: 0.25s;
+}
+
+
+/* CHECKBOX */
+/* input[type='checkbox'] {
+    height: 50px;
+    width: 50px;
+    border-radius: 25%;
+ } */
+
+input[type=checkbox] {
+    position: relative;
+    margin-right: 15px;
+}
+
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: 2px solid #555555;
+    border-radius: 6px;
+    background-color: white;
+}
+
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(5, 139, 0);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+.img-select{
+    width: 100%;
+}
+
+.title-select{
+    font-family: 'Russo one';
+    font-size: 50px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 319px) and (max-width: 450px)  {
+    .pres {
+        display: flex;
+        justify-content: flex-start;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .pres h1{
+      font-size: 25px;
+      margin: 50px 0 20px 0;
+    }
+    .pres h2{
+        font-size: 16px;
+    }
+    .pres p{
+        width: 90%;
+        font-size: 12px;
+    }
+    .btn-app{
+        width: 50%;
+    }
+
+    /* TODO CONTAIN */
+    .todo{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .todo-menu{
+        width: 88%;
+        height: auto;
+        margin: 0;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .list-cat{
+        width: 75%;  
+    }
+
+    #form1 label{
+        font-size: 16px;
+    }
+
+    /* DIV TITLE */
+    #title-div {
+       width: 88%;
+       margin: 0;
+       padding: 10px;
+    }
+
+    .form2Title{
+        width: 35%;
+        font-size: 25px;
+    }
+
+    .form2-contain{
+        width: 60%;
+    }
+
+    .title-select{
+        font-size: 30px;
+    }
+  }
