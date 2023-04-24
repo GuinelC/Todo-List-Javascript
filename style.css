@@ -9,13 +9,16 @@ body {
 }
 
 nav {
+    display: flex;
+    align-items: center;
     background-color: #1A2B3C;
+    font-family: 'Russo one';
+    font-size: 22px;
     position: sticky;
     top: 0;
     width: 100%;
-    height: 45px;
-    padding: 10px;
-    /* position: sticky; */
+    height: 50px;
+    padding-left: 25px;
 }
 
 nav a {
@@ -375,14 +378,44 @@ form button:hover {
     transition: 0.25s;
 }
 
+.img-select{
+    width: 100%;
+}
+
+.title-select{
+    font-family: 'Russo one';
+    font-size: 50px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+/* // FOOTER */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A2B3C;
+    font-family: 'Rajdhani';
+    font-size: 18px;
+    width: 100%;
+    color: #909090;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
 
 /* CHECKBOX */
-/* input[type='checkbox'] {
-    height: 50px;
-    width: 50px;
-    border-radius: 25%;
- } */
-
 input[type=checkbox] {
     position: relative;
     margin-right: 15px;
@@ -414,17 +447,6 @@ input[type=checkbox]:checked:after {
     position: absolute;
     top: 2px;
     left: 6px;
-}
-
-.img-select{
-    width: 100%;
-}
-
-.title-select{
-    font-family: 'Russo one';
-    font-size: 50px;
-    text-align: center;
-    margin: 10px 0 10px 0;
 }
 
 /* RESPONSIVE */
