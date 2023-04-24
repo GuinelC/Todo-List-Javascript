@@ -59,6 +59,10 @@ function deleteTodo(id) {
   todos.splice(index, 1);
   saveTodos();
   console.log("index delete is: ", index);
+  
+  if (todos < 1){
+    window.location.reload();
+  }
   // Vider les éléments qui était afficher dans cette Todo
   setTimeout(() => {
     containItem.innerHTML = `<h2 class="title-select">Faite votre selection !</h2>
