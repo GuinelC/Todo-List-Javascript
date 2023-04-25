@@ -41,8 +41,7 @@ nav a {
     box-sizing: border-box;
     align-items: center;
     height: auto;
-    background-color: darkgoldenrod;
-    /* background-color: rgb(243, 243, 243); */
+    background-color: rgb(243, 243, 243);
 }
 
 .home img {
@@ -56,8 +55,8 @@ nav a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: coral;
-    /* background-color: rgb(243, 243, 243); */
+    /* background-color: coral; */
+    background-color: rgb(243, 243, 243);
     padding-top: 60px
 }
 
@@ -477,28 +476,28 @@ input[type=checkbox]:checked:after {
     }
     .pres {
         display: flex;
-        height: 350px;
+        height: 450px;
         padding: 5px;
         box-sizing: border-box;
     }
     .pres h1{
-      max-width: 75%;
-      font-size: 20px;
+      max-width: 85%;
+      font-size: 28px;
       margin-top: 20px;
     }
     .pres h2{
         max-width: 80%;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
     }
     .pres p{
         margin: 5px;
         width: 95%;
-        font-size: 14px;
+        font-size: 16px;
     }
     .btn-app{
         width: 50%;
-        max-height: 30px;
+        max-height: 35px;
         padding: 5px;
         margin: 15px;
     }
