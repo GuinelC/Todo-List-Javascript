@@ -38,8 +38,8 @@ nav a {
 
 .home {
     display: flex;
-    justify-content: center;
     box-sizing: border-box;
+    align-items: center;
     height: auto;
     background-color: darkgoldenrod;
     /* background-color: rgb(243, 243, 243); */
@@ -465,13 +465,19 @@ input[type=checkbox]:checked:after {
 
 /* RESPONSIVE */
 @media only screen and (min-width: 319px) and (max-width: 450px)  {
+    .home{
+        display: flex;
+        min-height: 500px;
+        justify-content: center;
+    }
     .home img {
         width: 40%;
-        height: auto;
+        height: 56vh;
         object-fit: cover;
     }
     .pres {
         display: flex;
+        height: 350px;
         padding: 5px;
         box-sizing: border-box;
     }
