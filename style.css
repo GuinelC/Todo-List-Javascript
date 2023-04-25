@@ -471,7 +471,7 @@ input[type=checkbox]:checked:after {
     }
     .home img {
         width: 40%;
-        height: 70vh;
+        height: 80vh;
         object-fit: cover;
     }
     .pres {
