@@ -39,20 +39,22 @@ nav a {
 .home {
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .home img {
     width: 40%;
-    max-height: 100vh;
+    min-height: 100vh;
+    object-fit: cover;
 }
 
 .pres {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     background-color: rgb(243, 243, 243);
-    /* width: 60%; */
-    /* height: auto; */
+    min-height: 100vh;
     padding-top: 60px
 }
 
@@ -221,6 +223,7 @@ form button:hover {
 }
 
 .delete-btn {
+    font-family: "Font Awesome 5 Free";
     font-size: 18px;
     border: none;
     background-color: transparent;
@@ -461,7 +464,7 @@ input[type=checkbox]:checked:after {
 @media only screen and (min-width: 319px) and (max-width: 450px)  {
     .pres {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         padding: 5px;
         box-sizing: border-box;
     }
