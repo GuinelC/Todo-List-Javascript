@@ -472,7 +472,7 @@ input[type=checkbox]:checked:after {
     }
     .home img {
         width: 40%;
-        height: 56vh;
+        height: 75vh;
         object-fit: cover;
     }
     .pres {
