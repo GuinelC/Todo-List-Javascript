@@ -39,15 +39,15 @@ nav a {
 .home {
     display: flex;
     justify-content: center;
-    height: 100vh;
-    min-height: 100%;
+    height: 90vh;
+    min-height: 90%;
 }
 
 .home img {
     width: 40%;
     object-fit: cover;
-    height: 100vh;
-    min-height: 100%;
+    height: 90vh;
+    min-height: 90%;
 }
 
 .pres {
