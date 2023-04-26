@@ -143,7 +143,7 @@ nav a {
 }
 
 
-  #list-cat {
+#list-cat {
     margin-top: 15px;
 }
 
@@ -496,10 +496,10 @@ input[type=checkbox]:checked:after {
     .pres p{
         margin: 5px;
         width: 95%;
-        font-size: 16px;
+        font-size: 15px;
     }
     .btn-app{
-        width: 50%;
+        font-size: 16px;
         min-height: 40px;
         padding: 5px;
         margin: 15px;
@@ -507,7 +507,7 @@ input[type=checkbox]:checked:after {
     }
 
     /* TODO CONTAIN */
-    .todo{
+    #todo{
         flex-wrap: wrap;
         width: 100%;
     }
