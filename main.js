@@ -3,7 +3,7 @@
 // startAPP
 const appBtn = document.querySelector(".btn-app");
 appBtn.addEventListener("click", () => {
-  const app = document.querySelector(".todo");
+  const app = document.getElementById("todo");
   app.style.display = "flex";
 });
 

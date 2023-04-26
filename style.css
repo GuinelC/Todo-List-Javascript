@@ -7,6 +7,9 @@ body {
     background-color: rgb(230, 230, 230);
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 nav {
     display: flex;
@@ -112,7 +115,7 @@ nav a {
 }
 
 /* TODO  */
-.todo {
+#todo {
     display: flex;
     justify-content: center;
     display: none;
