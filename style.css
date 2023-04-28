@@ -524,6 +524,10 @@ input[type=checkbox]:checked:after {
         font-size: 16px;
     }
 
+    .delete-btn {
+        color: rgb(49, 49, 49);
+    }
+
     /* DIV TITLE */
     #title-div {
        width: 88%;
