@@ -228,7 +228,7 @@ form button:hover {
 }
 
 .delete-btn {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'FontAwesome';
     font-size: 18px;
     border: none;
     background-color: transparent;
@@ -325,10 +325,6 @@ form button:hover {
     margin-right: 10px;
 }
 
-/* .fa-circle-chevron-down{
-    font-size: 25px;
-} */
-
 #add-Item {
     height: 45px;
     background-color: black;
@@ -379,6 +375,7 @@ form button:hover {
 }
 
 .delItem {
+    font-family: 'FontAwesome';
     background-color: transparent;
     border: none;
     font-size: 19px;
@@ -545,5 +542,9 @@ input[type=checkbox]:checked:after {
 
     .title-select{
         font-size: 30px;
+    }
+
+    .delItem{
+        color: rgb(49, 49, 49);
     }
   }
